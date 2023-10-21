@@ -2,13 +2,18 @@ package com.mindex.challenge.data;
 
 import java.util.Date;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class Compensation {
+	@NotNull
 	private Employee employee;
+	
+	@Min(0) //A salary must be a positive number
 	private Long salary;
 	
-	@JsonFormat(pattern = "MM/dd/yyyy")
 	private Date effectiveDate;
 	
 	/* Constructors */

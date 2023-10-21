@@ -1,8 +1,5 @@
 package com.mindex.challenge.service.impl;
 
-import java.util.Date;
-import java.util.UUID;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +25,18 @@ public class CompensationServiceImpl implements CompensationService {
 	@Override
 	public Compensation create(Compensation compensation) {
 		LOG.debug("Inserting Compensation: [{}]", compensation);
-		/* Check to make sure the Employee is valid - It's possible just an employeeId was provided */
+		String employeeId = compensation.getEmployee().getEmployeeId();
+		
+		/* Make sure the employeeId entered doesn't already have a Compensation entered.
+		 * If it does, return a RuntimeException that will return a 409 Error
+		 */
+		if(compensationRepository.countByEmployeeEmployeeId(employeeId) > 0) {
+			throw new RuntimeException("Compensation for employeeId [" + employeeId + "] already exists");
+		}
+		
+		/* Check to make sure the Employee is valid - It's possible just an employeeId was provided 
+		 * If the employeeId / employee isn't valid, throw an IllegalArgumentException that'll return a 404 error
+		 */
 		Employee employee = employeeRepository.findByEmployeeId(compensation.getEmployee().getEmployeeId());
 		if(employee == null) {
 			throw new IllegalArgumentException("No Employee could be found for employeeId [" + compensation.getEmployee().getEmployeeId() + "]");

@@ -3,7 +3,9 @@ package com.mindex.challenge.service.impl;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Set;
 
 import org.slf4j.Logger;
@@ -40,16 +42,27 @@ public class ReportingStructureServiceImpl implements ReportingStructureService 
 		if(directReports != null && !directReports.isEmpty()) { //Only check the direct report count if there actually are any direct reports
 			numberOfReports = getDirectReportsCnt(employee, usedEmployeeIds);
 		}
-		*/				
+		*/			
 		
-		//By using a LinkedHashSet, we can guarantee we never count an employee twice
-		Set<Employee> directReports = new LinkedHashSet<Employee>(employee.getDirectReports());
+		/* Keep track of the thatr have already been checked, so that we don't double count them if an employee appears multiple times in the chain */
+		List<String> usedIds = new LinkedList<String>();
+		List<Employee> directReports = new LinkedList<Employee>(employee.getDirectReports());
+		for(Employee emp : directReports) {
+			usedIds.add(emp.getEmployeeId());
+		}
 		
-		Iterator<Employee> itr = directReports.iterator();
-		while(itr.hasNext()) {
-			Employee nextEmp = itr.next();
-			nextEmp = employeeRepository.findByEmployeeId(nextEmp.getEmployeeId()); //DirectReport Employees are lazy-loaded. Load the read of their info
-			directReports.addAll(nextEmp.getDirectReports());
+		ListIterator<Employee> listItr = directReports.listIterator();
+		while(listItr.hasNext()) {
+			Employee nextEmp = listItr.next();
+			Employee nextEmpLoaded = employeeRepository.findByEmployeeId(nextEmp.getEmployeeId()); //DirectReport Employees are lazy-loaded. Load the read of their info
+			/* Add all currently unchecked employees to the list that's being iterated through */
+			for(Employee emp : nextEmpLoaded.getDirectReports()) {
+				if(!usedIds.contains(emp.getEmployeeId())) {
+					usedIds.add(emp.getEmployeeId());
+					listItr.add(emp);
+					listItr.previous();
+				}
+			}
 		}
 		
 		return new ReportingStructure(employee, directReports.size());

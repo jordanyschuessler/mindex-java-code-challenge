@@ -8,4 +8,6 @@ import com.mindex.challenge.data.Compensation;
 @Repository
 public interface CompensationRepository extends MongoRepository<Compensation, String> {
 	Compensation findByEmployeeEmployeeId(String employeeId);
+	
+	int countByEmployeeEmployeeId(String employeeId);
 }

@@ -1,5 +1,7 @@
 package com.mindex.challenge.service;
 
+import java.util.List;
+
 import com.mindex.challenge.data.Employee;
 
 public interface EmployeeService {

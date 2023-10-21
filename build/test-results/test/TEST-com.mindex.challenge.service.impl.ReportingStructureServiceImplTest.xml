@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.mindex.challenge.service.impl.ReportingStructureServiceImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-21T19:50:17" hostname="DESKTOP-7GHNL1E" time="0.169">
+  <properties/>
+  <testcase name="testReportingStructureRead" classname="com.mindex.challenge.service.impl.ReportingStructureServiceImplTest" time="0.169"/>
+  <system-out><![CDATA[2023-10-21 15:50:17.402  INFO 2324 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mindex.challenge.service.impl.ReportingStructureServiceImplTest], using SpringBootContextLoader
+2023-10-21 15:50:17.403  INFO 2324 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.mindex.challenge.service.impl.ReportingStructureServiceImplTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-10-21 15:50:17.403  INFO 2324 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.mindex.challenge.service.impl.ReportingStructureServiceImplTest]: ReportingStructureServiceImplTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-10-21 15:50:17.403  INFO 2324 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.mindex.challenge.ChallengeApplication for test class com.mindex.challenge.service.impl.ReportingStructureServiceImplTest
+2023-10-21 15:50:17.404  INFO 2324 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-10-21 15:50:17.404  INFO 2324 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3566ddf9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@40d7356d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@ca53c11, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6ebd60c0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6d37f1fb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@14b2dd6d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@31d23e5e, org.springframework.test.context.event.EventPublishingTestExecutionListener@34ecf3c4, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6686648b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@64dd9483, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@44dd6688, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@17fcdf04, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@428b534c]
+2023-10-21 15:50:17.422 DEBUG 2324 --- [o-auto-1-exec-4] c.m.c.controller.EmployeeController      : Received employee create request for [employeeId: 
+First Name: knnsyt
+Last Name: kphtjnywr
+Position: lbmnogye
+Department: mezvsc
+DirectReports
+]
+2023-10-21 15:50:17.422 DEBUG 2324 --- [o-auto-1-exec-4] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee [employeeId: 
+First Name: knnsyt
+Last Name: kphtjnywr
+Position: lbmnogye
+Department: mezvsc
+DirectReports
+]
+2023-10-21 15:50:17.438 DEBUG 2324 --- [o-auto-1-exec-5] c.m.c.controller.EmployeeController      : Received employee create request for [employeeId: 
+First Name: zchqrylmkdp
+Last Name: yuujagpsak
+Position: soqgyevhpd
+Department: mxgibfy
+DirectReports
+]
+2023-10-21 15:50:17.438 DEBUG 2324 --- [o-auto-1-exec-5] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee [employeeId: 
+First Name: zchqrylmkdp
+Last Name: yuujagpsak
+Position: soqgyevhpd
+Department: mxgibfy
+DirectReports
+]
+2023-10-21 15:50:17.453 DEBUG 2324 --- [o-auto-1-exec-6] c.m.c.controller.EmployeeController      : Received employee create request for [employeeId: 
+First Name: ldonzoerxy
+Last Name: oddjmul
+Position: kskbtysu
+Department: paoazxdkuwi
+DirectReports
+]
+2023-10-21 15:50:17.454 DEBUG 2324 --- [o-auto-1-exec-6] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee [employeeId: 
+First Name: ldonzoerxy
+Last Name: oddjmul
+Position: kskbtysu
+Department: paoazxdkuwi
+DirectReports
+]
+2023-10-21 15:50:17.469 DEBUG 2324 --- [o-auto-1-exec-7] c.m.c.controller.EmployeeController      : Received employee create request for [employeeId: 
+First Name: hnftnjbmdqn
+Last Name: ldehtxhv
+Position: yjliix
+Department: dodwlv
+DirectReports
+]
+2023-10-21 15:50:17.470 DEBUG 2324 --- [o-auto-1-exec-7] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee [employeeId: 
+First Name: hnftnjbmdqn
+Last Name: ldehtxhv
+Position: yjliix
+Department: dodwlv
+DirectReports
+]
+2023-10-21 15:50:17.485 DEBUG 2324 --- [o-auto-1-exec-8] c.m.c.controller.EmployeeController      : Received employee create request for [employeeId: 
+First Name: ciffaeiei
+Last Name: hxkfdnjx
+Position: rmvemsnl
+Department: mzwdzxgp
+DirectReports
+]
+2023-10-21 15:50:17.485 DEBUG 2324 --- [o-auto-1-exec-8] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee [employeeId: 
+First Name: ciffaeiei
+Last Name: hxkfdnjx
+Position: rmvemsnl
+Department: mzwdzxgp
+DirectReports
+]
+2023-10-21 15:50:17.501 DEBUG 2324 --- [o-auto-1-exec-9] c.m.c.controller.EmployeeController      : Received employee create request for [employeeId: 
+First Name: rwwkss
+Last Name: vxyhti
+Position: jqgcyaqf
+Department: vokbsi
+DirectReports
+]
+2023-10-21 15:50:17.501 DEBUG 2324 --- [o-auto-1-exec-9] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee [employeeId: 
+First Name: rwwkss
+Last Name: vxyhti
+Position: jqgcyaqf
+Department: vokbsi
+DirectReports
+]
+2023-10-21 15:50:17.517 DEBUG 2324 --- [-auto-1-exec-10] c.m.c.controller.EmployeeController      : Received employee create request for [employeeId: 
+First Name: ckydwjnf
+Last Name: qfnrbnorskp
+Position: fqkbghfpdd
+Department: gxesedojzcj
+DirectReports
+]
+2023-10-21 15:50:17.517 DEBUG 2324 --- [-auto-1-exec-10] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee [employeeId: 
+First Name: ckydwjnf
+Last Name: qfnrbnorskp
+Position: fqkbghfpdd
+Department: gxesedojzcj
+DirectReports
+]
+2023-10-21 15:50:17.531 DEBUG 2324 --- [o-auto-1-exec-1] c.m.c.controller.EmployeeController      : Received employee create request for [employeeId: 
+First Name: wbomclcsrvc
+Last Name: ctqbgzlml
+Position: xcykmapw
+Department: irxrpgqvh
+DirectReports
+]
+2023-10-21 15:50:17.532 DEBUG 2324 --- [o-auto-1-exec-1] c.m.c.service.impl.EmployeeServiceImpl   : Creating employee [employeeId: 
+First Name: wbomclcsrvc
+Last Name: ctqbgzlml
+Position: xcykmapw
+Department: irxrpgqvh
+DirectReports
+]
+2023-10-21 15:50:17.536 DEBUG 2324 --- [o-auto-1-exec-2] c.m.c.c.ReportingStructureController     : Received reporting structure read request for id [5eeaf099-35eb-4b73-9ade-ea5f8494a18e]
+2023-10-21 15:50:17.540 DEBUG 2324 --- [o-auto-1-exec-3] c.m.c.controller.EmployeeController      : Received employee update request for id [86557bb3-ca78-45e6-9195-4c4d240e0e4f] and employee [employeeId: 86557bb3-ca78-45e6-9195-4c4d240e0e4f
+First Name: rwwkss
+Last Name: vxyhti
+Position: jqgcyaqf
+Department: vokbsi
+DirectReports: 62f0fbf7-f5e2-4585-b79f-cec2d4977f4a
+]
+2023-10-21 15:50:17.540 DEBUG 2324 --- [o-auto-1-exec-3] c.m.c.service.impl.EmployeeServiceImpl   : Updating employee [employeeId: 86557bb3-ca78-45e6-9195-4c4d240e0e4f
+First Name: rwwkss
+Last Name: vxyhti
+Position: jqgcyaqf
+Department: vokbsi
+DirectReports: 62f0fbf7-f5e2-4585-b79f-cec2d4977f4a
+]
+2023-10-21 15:50:17.543 DEBUG 2324 --- [o-auto-1-exec-4] c.m.c.controller.EmployeeController      : Received employee update request for id [92ebee4b-0ffd-4e37-b045-c23aa70d8fbd] and employee [employeeId: 92ebee4b-0ffd-4e37-b045-c23aa70d8fbd
+First Name: ciffaeiei
+Last Name: hxkfdnjx
+Position: rmvemsnl
+Department: mzwdzxgp
+DirectReports: daf8ca80-7c9b-4324-a13b-7892269f55b3
+]
+2023-10-21 15:50:17.543 DEBUG 2324 --- [o-auto-1-exec-4] c.m.c.service.impl.EmployeeServiceImpl   : Updating employee [employeeId: 92ebee4b-0ffd-4e37-b045-c23aa70d8fbd
+First Name: ciffaeiei
+Last Name: hxkfdnjx
+Position: rmvemsnl
+Department: mzwdzxgp
+DirectReports: daf8ca80-7c9b-4324-a13b-7892269f55b3
+]
+2023-10-21 15:50:17.546 DEBUG 2324 --- [o-auto-1-exec-5] c.m.c.controller.EmployeeController      : Received employee update request for id [2e60548d-cdfe-4872-b3a2-5c50df85719e] and employee [employeeId: 2e60548d-cdfe-4872-b3a2-5c50df85719e
+First Name: ldonzoerxy
+Last Name: oddjmul
+Position: kskbtysu
+Department: paoazxdkuwi
+DirectReports: daf8ca80-7c9b-4324-a13b-7892269f55b3, 62f0fbf7-f5e2-4585-b79f-cec2d4977f4a, 73367c57-0513-4931-bcb5-06980dfc6d4b
+]
+2023-10-21 15:50:17.547 DEBUG 2324 --- [o-auto-1-exec-5] c.m.c.service.impl.EmployeeServiceImpl   : Updating employee [employeeId: 2e60548d-cdfe-4872-b3a2-5c50df85719e
+First Name: ldonzoerxy
+Last Name: oddjmul
+Position: kskbtysu
+Department: paoazxdkuwi
+DirectReports: daf8ca80-7c9b-4324-a13b-7892269f55b3, 62f0fbf7-f5e2-4585-b79f-cec2d4977f4a, 73367c57-0513-4931-bcb5-06980dfc6d4b
+]
+2023-10-21 15:50:17.550 DEBUG 2324 --- [o-auto-1-exec-6] c.m.c.controller.EmployeeController      : Received employee update request for id [5eeaf099-35eb-4b73-9ade-ea5f8494a18e] and employee [employeeId: 5eeaf099-35eb-4b73-9ade-ea5f8494a18e
+First Name: knnsyt
+Last Name: kphtjnywr
+Position: lbmnogye
+Department: mezvsc
+DirectReports: 617f8e09-f2bb-4643-855b-53e7d465a854, 2e60548d-cdfe-4872-b3a2-5c50df85719e, 62f0fbf7-f5e2-4585-b79f-cec2d4977f4a
+]
+2023-10-21 15:50:17.550 DEBUG 2324 --- [o-auto-1-exec-6] c.m.c.service.impl.EmployeeServiceImpl   : Updating employee [employeeId: 5eeaf099-35eb-4b73-9ade-ea5f8494a18e
+First Name: knnsyt
+Last Name: kphtjnywr
+Position: lbmnogye
+Department: mezvsc
+DirectReports: 617f8e09-f2bb-4643-855b-53e7d465a854, 2e60548d-cdfe-4872-b3a2-5c50df85719e, 62f0fbf7-f5e2-4585-b79f-cec2d4977f4a
+]
+2023-10-21 15:50:17.554 DEBUG 2324 --- [o-auto-1-exec-7] c.m.c.c.ReportingStructureController     : Received reporting structure read request for id [5eeaf099-35eb-4b73-9ade-ea5f8494a18e]
+2023-10-21 15:50:17.561 DEBUG 2324 --- [o-auto-1-exec-8] c.m.c.c.ReportingStructureController     : Received reporting structure read request for id [2e60548d-cdfe-4872-b3a2-5c50df85719e]
+2023-10-21 15:50:17.566 DEBUG 2324 --- [o-auto-1-exec-9] c.m.c.c.ReportingStructureController     : Received reporting structure read request for id [92ebee4b-0ffd-4e37-b045-c23aa70d8fbd]
+2023-10-21 15:50:17.569 DEBUG 2324 --- [-auto-1-exec-10] c.m.c.c.ReportingStructureController     : Received reporting structure read request for id [86557bb3-ca78-45e6-9195-4c4d240e0e4f]
+2023-10-21 15:50:17.573 DEBUG 2324 --- [o-auto-1-exec-1] c.m.c.c.ReportingStructureController     : Received reporting structure read request for id [12345]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

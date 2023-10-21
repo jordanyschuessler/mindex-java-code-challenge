@@ -3,6 +3,8 @@ package com.mindex.challenge.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,16 +20,13 @@ public class ReportingStructureController {
     private ReportingStructureService reportingStructureService;
     
     @GetMapping("/reporting_structure/{id}")
-    public ReportingStructure read(@PathVariable String id) {
+    public ResponseEntity<? extends Object> read(@PathVariable String id) {
         LOG.debug("Received reporting structure read request for id [{}]", id);
         try {
-        	ReportingStructure retVal = reportingStructureService.read(id);
-        	return retVal;
-        } catch (IllegalArgumentException e) {
-        	e.printStackTrace();
-        	LOG.error("No user with the requested id [{}] could be found", id);
+        	ReportingStructure reportingStructure = reportingStructureService.read(id);
+        	return ResponseEntity.ok(reportingStructure);
+        }  catch (IllegalArgumentException e) {
+        	return new ResponseEntity<>("No employee with employeeId [" + id + "] could be found", HttpStatus.NOT_FOUND);
         }
-        
-        return null;
     }
 }
